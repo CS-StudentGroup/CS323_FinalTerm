@@ -5,7 +5,7 @@ MEDIUM = 100_000
 LARGE = 1_000_000
 
 def generate_random(n):
-    return [random.randint(1, 1000000) for _ in range(n)]
+    return [random.randint(1, n) for _ in range(n)]
 
 def generate_sorted(n):
     return list(range(1, n + 1))

@@ -1,23 +1,29 @@
 from multiprocessing import Process, Queue
 
-def worker(sub_data, target, q, offset):
+def search_worker(sub_data, target, q, offset):
     for i in range(len(sub_data)):
         if target == sub_data[i]:
-            q.put(i+offset)
+            q.put(i + offset)
             return
     q.put(-1)
 
 
-def parallel_search(data, target):
+def parallel_search(data, target, num_processes=4):
+    if not data:
+        return -1
+        
     processes = []
     q = Queue()
 
-    chunk_size = len(data) // 4
+    chunk_size = max(1, len(data) // num_processes)
+    actual_processes = min(num_processes, len(data))
 
-    for i in range(4):
+    for i in range(actual_processes):
         offset = chunk_size * i
-        sub_data = data[offset:offset+chunk_size]
-        p = Process(target=worker, args=(sub_data, target, q, offset))
+        end_idx = len(data) if i == actual_processes - 1 else offset + chunk_size
+        sub_data = data[offset:end_idx]
+        
+        p = Process(target=search_worker, args=(sub_data, target, q, offset))
         processes.append(p)
         p.start()
 
@@ -31,4 +37,3 @@ def parallel_search(data, target):
         p.join()
 
     return result
-

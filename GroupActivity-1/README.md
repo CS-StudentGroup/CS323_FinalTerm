@@ -46,7 +46,7 @@ Executing this module drops you into a controlled interactive menu environment a
 
 #### James Dominic Tion
 
-<!-- Enter reflection here -->
+As Observed from testing Sequential beats Parallel in sorting, but as n grows larger Parallel beats Sequential. I was tasked to create the Parallel Search algorithm, my first problem was where to implement the processes, the second is how to divide the labor. To solve the first one was to implement it directly to the search algorithm, second was to split the data into "chunks" so that each process only needs to deal with their chunk. Using multiple process requires a lot of overhead to startup since it has to start up its own python interpreter which will take some time, parallelism though was unnecessary if the dataset is too small.
 
 #### Kurt Andre Olaer
 

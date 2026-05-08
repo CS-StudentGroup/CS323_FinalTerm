@@ -1,5 +1,4 @@
-Understood. Here is the Individual Reflections section for your README.md with Member 1’s content populated and the others left as empty placeholders for your group mates to fill in.
-Individual Student Reflections
+REFLECTIONS
 
 Member 1: Tion, James Dominic P.
 

@@ -1,1 +1,5 @@
-/docs
+.idea/
+__pycache__/
+/docsLocal
+.venv
+.env

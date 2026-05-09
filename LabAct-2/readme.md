@@ -204,7 +204,7 @@ Our Supabase setup made the lab's architecture feel real: edge nodes send votes 
 
 **Member 3: Gimolatan, Brandon Ian A.**
 
-(Reflection Here)
+During the implementation and testing of the distributed voting system on Google Cloud Platform, I observed major differences between sequential and distributed execution. In the sequential setup, processing was simpler and easier to debug, while the distributed system allowed multiple edge nodes to send votes simultaneously through Cloud Run, Pub/Sub, the worker service, and Firestore. As the number of votes increased, Pub/Sub buffered messages to handle the load, while Firestore showed slight delays due to eventual consistency. One of the main challenges was configuring and connecting the different GCP services, especially during deployment and debugging. Although distributed execution improved scalability and processing throughput, it also introduced communication overhead, synchronization delays, and more complex debugging. Overall, the activity helped me better understand the advantages and challenges of distributed systems in real-world cloud environments.
 
 **Member 4: Gicole, Aldrick James A.**
 

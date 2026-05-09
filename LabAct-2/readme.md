@@ -208,7 +208,7 @@ During the implementation and testing of the distributed voting system on Google
 
 **Member 4: Gicole, Aldrick James A.**
 
-(Reflection Here)
+During testing distributed voting system gave me a understanding how real-world cloud architectures handle reliability and how distributed architectures improve reliability and scalability compared to sequential systems. What stood out most to me was how the system kept working even when parts of it failed. I observed that even when the worker service was temporarily unavailable, the edge nodes were still able to send votes successfully because the queue stored the pending requests. I also learned the importance of idempotency since duplicate vote requests did not create duplicate records in the final votes table. Overall, this activity made me realize how hard this is.
 
 **Member 5: Abulkhair, Johanie A.**
 

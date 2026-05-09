@@ -212,4 +212,5 @@ During testing distributed voting system gave me a understanding how real-world 
 
 **Member 5: Abulkhair, Johanie A.**
 
-(Reflection Here)
+Working on our distributed voting system project helped me better appreciate how modern applications are designed to stay reliable even when some parts of the system fail. Seeing our edge nodes, API, queue, and worker work together showed how distributed systems can continue functioning without completely stopping. The project also made me realize that building cloud-based applications involves more than just coding, since proper coordination between services is important for maintaining performance and reliability. Overall, the activity gave me a better understanding of how distributed architectures are used in real-world systems to support scalability and continuous operation.
+
